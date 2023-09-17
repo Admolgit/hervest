@@ -5,7 +5,7 @@ function SavingForm({ showModal, onClose }) {
   const [range, setRange] = React.useState(0);
   const [step, setStep] = React.useState(0);
   const ref = React.useRef(null);
-  const form = React.useRef(null);
+  // const form = React.useRef(null);
 
   const getRange = (ev) => {
     setRange(ev.target.value);
@@ -21,19 +21,19 @@ function SavingForm({ showModal, onClose }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const SERVICE_ID = 'service_0wimdyw';
-    const TEMPLATE_ID = 'template_bcwygpl';
-    const USER_ID = 'W0yrLZXUOnFzvGCJx';
+    // const SERVICE_ID = 'service_0wimdyw';
+    // const TEMPLATE_ID = 'template_bcwygpl';
+    // const USER_ID = 'W0yrLZXUOnFzvGCJx';
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      },
-    );
-    event.target.reset();
+    // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
+    //   (result) => {
+    //     console.log(result.text);
+    //   },
+    //   (error) => {
+    //     console.log(error.text);
+    //   },
+    // );
+    // event.target.reset();
   };
 
   if (!showModal) return null;
@@ -41,9 +41,9 @@ function SavingForm({ showModal, onClose }) {
   return (
     <div>
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
-        <div className="bg-white w-[413px] rounded-[10px] ">
+        <div className="bg-white w-[413px] rounded-[10px] sm:w-[300px] ">
           <>
-            <div className="flex justify-between items-center pl-[2rem] pr-[2rem] pt-[20px] ">
+            <div className="flex justify-between items-center pl-[2rem] pr-[2rem] pt-[20px] sm:pl-[1rem] sm:pr-[1rem] ">
               <h1 className="font-[700] text-[18px] leading-[20px] text-[#33343D] ">
                 Create a Savings Plan
               </h1>
@@ -53,14 +53,15 @@ function SavingForm({ showModal, onClose }) {
                 </p>
               </div>
             </div>
-            <p className=" pl-[2rem] pr-[2rem] pt-[10px]">
+            <p className=" pl-[2rem] pr-[2rem] pt-[10px] sm:pl-[1rem] sm:pr-[1rem] text-[14px] sm:text-[13px] ">
               Start a savings plan to smash your goals
             </p>
           </>
           <form
-            className="flex justify-center mx-auto items-center gap-[36px] w-[300px] flex-col mt-[3rem]  "
-            onSubmit={handleSubmit}
-            ref={form}
+            className="flex justify-center mx-auto items-center gap-[36px] w-[300px] flex-col mt-[3rem] sm:w-[250px] "
+            // onSubmit={handleSubmit}
+            // ref={form}
+             action="mailto:yomi@hervest.ng" method="post" enctype="text/plain"
           >
             <div className="">
               <label className={`block text-xs mb-1}`} htmlFor="name">
@@ -68,7 +69,7 @@ function SavingForm({ showModal, onClose }) {
               </label>
               <input
                 type="text"
-                className="form-input rounded-md border bg-[#FEF7FA] placeholder:text-gray-400  text-xs w-[300px] px-[19px] py-[12px] xs:w-[250px] text-gray-500 focus:border-[#0d1027]"
+                className="form-input rounded-md border bg-[#FEF7FA] placeholder:text-gray-400  text-xs w-[300px] px-[19px] py-[12px] sm:w-[250px] text-gray-500 focus:border-[#0d1027]"
                 placeholder="Enter Name"
                 name="user_savings"
               />
@@ -78,11 +79,11 @@ function SavingForm({ showModal, onClose }) {
               <label className={`block text-xs mb-1`} htmlFor="amount">
                 {'Target Amount'}
               </label>
-              <div className="w-[300px] gap-[10px] items-center px-[19px] rounded-md border bg-[#FEF7FA] flex ">
+              <div className="w-[300px] sm:w-[250px] gap-[10px] items-center px-[19px] rounded-md border bg-[#FEF7FA] flex ">
                 <h1>NGN</h1>
                 <input
                   type="number"
-                  className="form-input w-full px-[19px] py-[12px] bg-[#FEF7FA] placeholder:text-gray-400 text-xs xs:w-[250px] text-gray-500 focus:border-[#0d1027]"
+                  className="form-input w-full px-[19px] py-[12px] bg-[#FEF7FA] placeholder:text-gray-400 text-xs sm:w-[250px] text-gray-500 focus:border-[#0d1027]"
                   placeholder=""
                   name="user_amount"
                 />
@@ -108,7 +109,7 @@ function SavingForm({ showModal, onClose }) {
               </label>
               <select
                 type="select"
-                className="form-input border rounded-md placeholder:text-gray-400 text-xs w-[300px] px-[19px] py-[12px] xs:w-[250px] mb-3 text-gray-500 bg-[#FEF7FA] focus:border-[#0d1027]"
+                className="form-input border rounded-md placeholder:text-gray-400 text-xs w-[300px] px-[19px] py-[12px] sm:w-[250px] mb-3 text-gray-500 bg-[#FEF7FA] focus:border-[#0d1027]"
                 placeholder=" Eg: Small, Medium, Large"
                 name="user_frequency"
               >
@@ -127,7 +128,7 @@ function SavingForm({ showModal, onClose }) {
                 {'How long do you want to save for?'}
               </label>
               <div className="flex flex-col items-center text-center gap-[50px] ">
-                <div className="w-[300px] flex  flex-col relative gap-[10px] ">
+                <div className="w-[300px] flex  sm:w-[250px] flex-col relative gap-[10px] ">
                   <input
                     type="range"
                     id="range"
@@ -154,7 +155,7 @@ function SavingForm({ showModal, onClose }) {
                 </div>
               </div>
             </div>
-            <div className="border-t w-[413px] flex items-end justify-end pr-[3rem] ">
+            <div className="border-t w-[413px] sm:w-[350px] flex items-end justify-end pr-[3rem] ">
               <input
                 type="submit"
                 className="transition-colors transition duration-700 ease-in-out my-[1rem] bg-[#5B2E4F] text-white hover:bg-[#5B2E4F] px-[28px] py-[13px] px-7 rounded-[10px] text-xs  cursor-pointer"

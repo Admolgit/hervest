@@ -14,12 +14,12 @@ import LogoutImg from '../../Assets/images/Iconly (8).svg';
 export const SideNavData = [
   {
     title: "Dashboard",
-    path: "/",
+    path: "/dashboard",
     icon: `${DashboardImg}`,
   },
   {
     title: "Plans",
-    path: "/plans",
+    path: "/",
     icon: `${PlansImg}`,
   },
   {

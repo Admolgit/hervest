@@ -11,13 +11,13 @@ function PersonalSavings() {
 
   return (
     <>
-      <div className="pl-[4rem] pl-[4rem] ">
+      <div className="pl-[4rem] pl-[4rem] sm:pl-[1rem] sm:pr-[1rem] ">
         <div className=" ">
           <div className=" ">
-            <div className="px-[7px] py-[9px] flex items-center gap-[10px] bg-[#FEF7FA] w-[86px] justify-center rounded-[9px] mt-[2rem] mb-[3rem] ">
+            <div className="px-[7px] py-[9px] flex items-center gap-[10px] bg-[#FEF7FA] w-[86px] justify-center rounded-[9px] mt-[2rem] mb-[3rem] sm:px-[7.71px] sm:py-[6px] ">
               <img src={ArrowDown} alt="" />
               <button
-                className="font-[500] text-[10px] leading-[13.5px] "
+                className="font-[500] text-[10px] leading-[13.5px] sm:text-[8.57px] "
                 onClick={handleClick}
               >
                 Back
@@ -31,14 +31,14 @@ function PersonalSavings() {
             <div className="bg-[#FEF7FA] rounded-[50%] ">
               <img src={SavingImg} className="px-[50px] py-[50px] " alt="" />
             </div>
-            <h1 className="font-[700] text-[24px] leading-[33px] text-center ">
+            <h1 className="font-[700] text-[24px] leading-[33px] text-center sm:text-[20px] sm:leading-[27px] ">
               No Personal Savings Plan!
             </h1>
-            <p className="w-[352px] text-center font-[400] text-[16px] leading-[24px] ">
+            <p className="w-[352px] text-center font-[400] text-[16px] leading-[24px] sm:w-[280px] ">
               Smash your financial goals by starting a personal savings plan
               today!
             </p>
-            <button onClick={() => setShowModal(true)} className="bg-[#5B2E4F] text-white text-[12px] px-[152px] py-[13px] font-[500] leading-[16.2px] ">
+            <button onClick={() => setShowModal(true)} className="bg-[#5B2E4F] text-white text-[12px] px-[32px] py-[13px] font-[500] leading-[16.2px] ">
               START A SAVINGS PLAN
             </button>
           </div>
