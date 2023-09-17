@@ -8,14 +8,14 @@ import RightArrow from '../../Assets/images/CaretRight (1).svg';
 
 function Header() {
   return (
-    <div className="pl-[4rem] pr-[4rem] ">
+    <div className="pl-[4rem] pr-[4rem] sm:pl-[1rem] sm:pr-[1rem] ">
       <h1 className="mt-[2rem] mb-[1rem] ">Plans</h1>
       <div className="grid grid-cols-3 gap-[25px] sm:grid-cols-1 ">
         <div className="flex items-start justify-between bg-[#EFEAED] px-[22px] py-[18px] cursor-pointer ">
-          <div className="flex items-center gap-[10px]">
-            <img src={PerImg} alt="" />
+          <div className="flex items-start gap-[10px]">
+            <img src={PerImg} className="sm:w-[36px] sm:h-[36px] " alt="" />
             <div>
-              <h3 className="font-[700] text-[] ">Personal</h3>
+              <h3 className="font-[700] text-[17px] sm:text-[16px] ">Personal</h3>
               <p className="font-[400] text-[13px] leading-[17.55px] ">
                 Locked savings towards long term goals.
               </p>
@@ -28,8 +28,8 @@ function Header() {
           </div>
         </div>
         <div className="flex items-start justify-between bg-[#EFEAED] px-[22px] py-[18px] cursor-pointer ">
-          <div className="flex items-center gap-[10px]">
-            <img src={CliqImg} alt="" />
+          <div className="flex items-start gap-[10px]">
+            <img src={CliqImg} className="sm:w-[36px] sm:h-[36px] " alt="" />
             <div>
               <h3 className="font-[700] text-[] ">Personal</h3>
               <p className="font-[400] text-[13px] leading-[17.55px] ">
@@ -42,8 +42,8 @@ function Header() {
           </div>
         </div>
         <div className="flex items-start justify-between bg-[#EFEAED] px-[22px] py-[18px] cursor-pointer ">
-          <div className="flex items-center gap-[10px]">
-            <img src={SoftImg} alt="" />
+          <div className="flex items-start gap-[10px]">
+            <img src={SoftImg} className="sm:w-[36px] sm:h-[36px] " alt="" />
             <div>
               <h3 className="font-[700] text-[] ">Personal</h3>
               <p className="font-[400] text-[13px] leading-[17.55px] ">
@@ -56,8 +56,8 @@ function Header() {
           </div>
         </div>
         <div className="flex items-start justify-between bg-[#EFEAED] px-[22px] py-[18px] cursor-pointer ">
-          <div className="flex items-center gap-[10px]">
-            <img src={KeyImg} alt="" />
+          <div className="flex items-start gap-[10px]">
+            <img src={KeyImg} className="sm:w-[36px] sm:h-[36px] " alt="" />
             <div>
               <h3 className="font-[700] text-[] ">Personal</h3>
               <p className="font-[400] text-[13px] leading-[17.55px] ">
