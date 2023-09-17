@@ -26,7 +26,7 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/refferal' element={<Refferal />} />
           <Route path='/about' element={<About />} />
-          <Route path="/plans" element={<Plans />} />
+          <Route index path="/" element={<Plans />} />
           <Route path="/savings" element={<PersonalSavings />} />
         </Route>
       </Routes>
